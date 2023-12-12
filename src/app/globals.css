@@ -17,11 +17,27 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  padding-inline:15%;
+  padding-top: 10%;
+  background: #131313;
+  color: #E2E5EB;
+}
+.scrolling-container {
+  width: 100%; /* Ensure it takes the full width available */
+  overflow: hidden;
+}
+
+.scrolling-image {
+  animation: scroll-left 15s linear infinite;
+  ; /* Adjust duration as needed */
+  margin-right: 20px; /* Adjust spacing between images */
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
