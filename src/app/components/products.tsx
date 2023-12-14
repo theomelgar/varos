@@ -4,7 +4,7 @@ import { FloatCard } from "./float-card";
 
 export const Products = () => {
   return (
-    <div className="h-screen flex justify-between">
+    <div style={{height:"60svh"}} className="flex justify-between">
       <div className="max-w-[564px] max-h-[533px]">
         <div className="flex flex-col  gap-8">
           <h1 className=" text-6xl font-extrabold">
