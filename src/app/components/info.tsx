@@ -7,7 +7,7 @@ import { List } from "./list";
 
 export const Info = () => {
   const [showList, setShowList] = useState({
-    carteira: false,
+    carteira: true,
     consultoria: false,
     cursos: false,
   });

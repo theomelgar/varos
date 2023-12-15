@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Condiment&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&family=Palanquin:wght@700&family=Shadows+Into+Light&family=Voltaire&display=swap");
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -17,10 +17,10 @@
 }
 
 body {
-  padding-inline:15%;
+  padding-inline: 15%;
   padding-top: 10%;
   background: #131313;
-  color: #E2E5EB;
+  color: #e2e5eb;
 }
 .scrolling-container {
   width: 100%; /* Ensure it takes the full width available */
@@ -28,8 +28,7 @@ body {
 }
 
 .scrolling-image {
-  animation: scroll-left 15s linear infinite;
-  ; /* Adjust duration as needed */
+  animation: scroll-left 15s linear infinite; /* Adjust duration as needed */
   margin-right: 20px; /* Adjust spacing between images */
 }
 
@@ -39,5 +38,40 @@ body {
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+.quote-container {
+  position: relative;
+  width: 372px; /* Set your width */
+  height: 345px; /* Set your height */
+  border: 1px solid #222729; /* Your border */
+  border-radius: 20px; /* Your border radius */
+  overflow: hidden;
+}
+
+.quote {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.visible {
+  opacity: 1;
+}
+
+@keyframes cycleQuotes {
+  0%, 100% {
+    z-index: 1;
+    opacity: 1;
+  }
+  33% {
+    z-index: 3;
+  }
+  66% {
+    z-index: 2;
   }
 }
