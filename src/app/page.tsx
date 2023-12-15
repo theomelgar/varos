@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Products } from "./components/products";
 import { Info } from "./components/info";
 import { Feedback } from "./components/feedback";
+import { Contact } from "./components/contact";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <Products />
       <Info />
       <Feedback />
+      <Contact />
     </main>
   );
 }

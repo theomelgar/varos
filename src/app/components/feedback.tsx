@@ -20,7 +20,7 @@ export const Feedback = () => {
   }, [quotes.length]);
 
   return (
-    <div className="h-screen w-full flex justify-between items-start">
+    <div className="h-[80svh] w-full flex justify-between items-start">
       <div className="flex flex-col justify-between items-start gap-y-20">
         <div className="flex flex-col justify-between items-start gap-y-2">
           <h1 className="font-bold text-4xl">Didática de verdade</h1>
