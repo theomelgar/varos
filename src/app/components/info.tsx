@@ -28,7 +28,7 @@ export const Info = () => {
   };
 
   return (
-    <div className="h-screen flex flex-col justify-center items-start gap-y-10">
+    <div className="h-[100svh] flex flex-col justify-center items-start gap-y-10">
       <div className="w-full flex-col items-center justify-center  ">
         <h1 className="w-1/2 text-4xl font-bold text-left mb-2">
           Simplifique seus investimentos e alcance seus objetivos

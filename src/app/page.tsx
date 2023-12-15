@@ -6,7 +6,7 @@ import { Contact } from "./components/contact";
 
 export default function Home() {
   return (
-    <main className="relative gap-y-4 flex flex-col">
+    <main className="relative gap-y-4 flex flex-col justify-between">
       <Products />
       <Info />
       <Feedback />
