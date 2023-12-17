@@ -3,13 +3,13 @@ import React from "react";
 
 export const Navbar = () => {
   return (
-    <div className="text-white w-full h-[64px] absolute top-0 left-0 flex justify-between items-center pl-[15%] pr-[15%]">
+    <div className="text-white w-full h-[64px] fixed  bg-[#131313] z-10 top-0 left-0 xl:flex justify-between items-center pl-[15%] pr-[15%] hidden">
       <div className="flex justify-start items-center gap-20">
-        <Image src="/varos.svg" alt="logo" width={80} height={15}></Image>
-        <h2>Produtos</h2>
-        <h2>Blog</h2>
-        <h2>Conteúdos</h2>
-        <h2>Quem Somos</h2>
+        <Image src="/varos.svg" alt="logo" width={80} height={15} className=" cursor-pointer"></Image>
+        <a href="/">Produtos</a>
+        <a href="/">Blog</a>
+        <a href="/">Conteúdos</a>
+        <a href="/">Quem Somos</a>
       </div>
       <div className="flex justify-end items-center gap-10 text-lg font-semibold">
         <div className="flex justify-center items-center gap-2">

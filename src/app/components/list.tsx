@@ -13,7 +13,7 @@ export const List = ({
   setSelected,
 }: any) => {
   return (
-    <div className="w-[270px]">
+    <div className="md:w-[270px] w-full md:p-0 p-4">
       <button
         className="flex items-center justify-center w-full h-14 rounded-3xl text-lg font-bold bg-[#222729]"
         onClick={toggleList}

@@ -28,19 +28,19 @@ export const Info = () => {
   };
 
   return (
-    <div className="h-[100svh] flex flex-col justify-center items-start gap-y-10">
+    <div className=" flex flex-col justify-center items-start gap-y-10">
       <div className="w-full flex-col items-center justify-center  ">
-        <h1 className="w-1/2 text-4xl font-bold text-left mb-2">
+        <h1 className="md:w-1/2 xl:text-4xl text-2xl font-bold md:text-left text-center mb-2">
           Simplifique seus investimentos e alcance seus objetivos
         </h1>
 
-        <h3 className="max-w-[500px] text-lg font-medium">
+        <h3 className="md:max-w-[500px] text-lg font-medium md:text-left text-center text-[#B0B7BE] ">
           Conteúdos preparados para trazer mais segurança, independente do seu
           nível.
         </h3>
       </div>
-      <div className=" w-full flex justify-between gap-x-40">
-        <div className="flex flex-col justify-start items-center mr-10 gap-2">
+      <div className=" w-full flex md:flex-row flex-col gap-y-10 md:justify-between lg:gap-x-40">
+        <div className="flex flex-col justify-start items-center md:mr-10 gap-2">
           <List
             listName="Carteira"
             data={infoCarteira}
@@ -76,10 +76,10 @@ export const Info = () => {
           />
         </div>
         <div
-          className=" w-full flex-col items-start justify-evenly border-2 border-[#222729] rounded-md pt-10
-         pl-10 relative z-10"
+          className=" w-full flex-col items-start justify-evenly border-2 border-[#222729]  rounded-3xl pt-10
+         pl-10 relative"
         >
-          <div className=" w-1/2 text-left">
+          <div className=" md:w-1/2 text-left">
             <div className="flex items-center gap-5 mb-10 text">
               <Image
                 src={actualLogo}
@@ -89,8 +89,10 @@ export const Info = () => {
               ></Image>
               <p>{actualText}</p>
             </div>
-            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </h2>
-            <h3>
+            <h2 className="text-[#F2F4F8] text-2xl font-semibold">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit,{" "}
+            </h2>
+            <h3 className=" text-[#D3D6DF]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim
@@ -101,7 +103,7 @@ export const Info = () => {
             alt="grafico"
             width={620}
             height={350}
-            className="mt-5 w-full"
+            className="mt-5 w-full  rounded-r-3xl"
           ></Image>
         </div>
       </div>

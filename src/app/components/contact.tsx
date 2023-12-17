@@ -49,8 +49,8 @@ export const Contact = () => {
   };
 
   return (
-    <div className="h-[50svh] w-full flex justify-between items-start">
-      <div className=" max-w-[463px] flex flex-col justify-start items-start gap-y-1">
+    <div className=" w-full flex md:flex-row  flex-col justify-between md:items-start items-center">
+      <div className=" lg:max-w-[463px] md:w-2/5 w-full flex flex-col justify-start md:items-start items-center gap-y-1 md:text-left text-center">
         <h2 className=" font-bold text-4xl">
           Cadastre-se para receber mais informações.
         </h2>
@@ -60,7 +60,7 @@ export const Contact = () => {
       </div>
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col items-center justify-center w-1/2 h-[384px] gap-y-6 p-16 rounded-3xl border border-[#222729]"
+        className="flex flex-col items-center justify-center md:w-1/2 h-[384px] gap-y-6 lg:p-16 md:p-4 p-2 rounded-3xl border border-[#222729]"
       >
         <input
           type="text"
