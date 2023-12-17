@@ -1,13 +1,11 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import axios from "axios";
 
-export default async function handler(
+export default async function POST(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  if (req.method !== "POST") {
-    return res.status(405).json({ message: "Method Not Allowed" });
-  }
+ 
 
   const { nome, email, celular } = req.body;
 

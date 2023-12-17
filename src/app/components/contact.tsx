@@ -1,5 +1,9 @@
 "use client";
-import React, { ChangeEvent, FormEventHandler, useState } from "react";
+import React, { ChangeEvent, ElementRef, useRef, useState } from "react";
+import POST from "../api/email/route";
+import { useAction } from "@/lib/use-action";
+import { sendEmail } from "@/actions/send-email";
+import toast from "react-hot-toast";
 
 export const Contact = () => {
   const formInitialState = {
@@ -7,35 +11,24 @@ export const Contact = () => {
     email: "",
     celular: "",
   };
-  const [formData, setFormData] = useState({
-    nome: "",
-    email: "",
-    celular: "",
-  });
+  const [formData, setFormData] = useState(formInitialState);
 
   const [formValid, setFormValid] = useState(false);
+  const formRef = useRef<ElementRef<"form">>(null);
+  const { execute, fieldErrors } = useAction(sendEmail, {
+    onSuccess: (formData) => {
+      setFormData(formInitialState);
+      setFormValid(false);
+      console.log(formData);
+      toast.success("Email sent successfully")
+    },
+    onError: (error) => {
+    },
+  });
 
-  const handleSubmit = async (e: any) => {
-    e.preventDefault();
-
-    try {
-      const response = await fetch("/your-email-sending-endpoint", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        console.log("Email sent successfully!");
-      } else {
-        console.error("Failed to send email.");
-      }
-    } catch (error) {
-      console.error("Error sending email:", error);
-    }
-    setFormData(formInitialState);
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    execute(formData);
   };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -59,6 +52,7 @@ export const Contact = () => {
         </h3>
       </div>
       <form
+        ref={formRef}
         onSubmit={handleSubmit}
         className="flex flex-col items-center justify-center md:w-1/2 h-[384px] gap-y-6 lg:p-16 md:p-4 p-2 rounded-3xl border border-[#222729]"
       >
