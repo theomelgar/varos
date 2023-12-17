@@ -1,6 +1,5 @@
 "use client";
 import React, { ChangeEvent, ElementRef, useRef, useState } from "react";
-import POST from "../api/email/route";
 import { useAction } from "@/lib/use-action";
 import { sendEmail } from "@/actions/send-email";
 import toast from "react-hot-toast";
