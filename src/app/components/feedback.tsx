@@ -17,7 +17,7 @@ export const Feedback = () => {
     }, 7000);
 
     return () => clearInterval(interval);
-  }, [quotes.length]);
+  }, []);
 
   return (
     <div className="w-full flex md:flex-row flex-col justify-between md:items-start items-center mt-20">
